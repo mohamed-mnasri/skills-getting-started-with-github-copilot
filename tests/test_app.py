@@ -33,7 +33,7 @@ def test_root_redirects_to_activity_page(client):
 
 def test_get_activities_returns_seeded_activities(client):
     # Arrange
-    expected_activity_names = {"Chess Club", "Programming Class", "Gym Class"}
+    expected_activity_names = set(activities)
 
     # Act
     response = client.get("/activities")
